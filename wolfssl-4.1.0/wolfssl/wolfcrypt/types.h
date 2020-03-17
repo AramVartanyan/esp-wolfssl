@@ -318,7 +318,7 @@
             #else
                 #define XMALLOC(s, h, t)     ((void)h, (void)t, wolfSSL_Malloc((s)))
                 #define XFREE(p, h, t)       {void* xp = (p); if((xp)) wolfSSL_Free((xp));}
-                #define XREALLOC(p, n, h, t) realloc((p), (n))
+                #define XREALLOC(p, n, h, t) wolfSSL_Realloc((p), (n))
             #endif /* WOLFSSL_DEBUG_MEMORY */
         #endif /* WOLFSSL_STATIC_MEMORY */
     #endif
