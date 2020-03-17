@@ -666,7 +666,7 @@ extern void uITRON4_free(void *p) ;
         #define XFREE(p, h, type)    vPortFree((p))
     #endif
     #if defined(HAVE_ED25519) || defined(WOLFSSL_ESPIDF)
-        #define XREALLOC(p, n, h, t) wolfSSL_Realloc((p), (n))
+        #define XREALLOC(p, n, h, t) realloc((p), (n))
     #endif
     #ifndef NO_WRITEV
         #define NO_WRITEV
